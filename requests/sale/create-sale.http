@@ -1,0 +1,12 @@
+@HOST = http://localhost:8080
+
+POST {{HOST}}/sale HTTP/1.1
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIxOGEzOGIyLTczMjctNDdmYS05YjEwLTJmNmFkMjE0MjIxYiIsIm5hbWUiOiJXaW5kc29uIiwiZW1haWwiOiJ3aW5kc29uLmFtb3JpbUBnbWFpbC5jb20iLCJwcm9maWxlIjoiQURNSU4iLCJpYXQiOjE2ODM1MDc3NjcsImV4cCI6MTY4MzUzNjU2N30.EWqwShBaN8-wYG8uCkCh6uPR5a72EggH8DniY4kwuho
+Content-Type: application/json
+{
+  "idSeller":"a6a40550-417f-4fb3-93c6-774353bb6320",
+  "idClient": "a999079b-1cad-41ba-bd38-a50f78521e99",
+  "idProduct":"43fba211-ff00-4d4c-988b-c34a24dbb927",
+  //"amount": 5, 
+}
+ 

@@ -1,0 +1,11 @@
+@HOST = http://localhost:8080
+
+POST {{HOST}}/product HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIxOGEzOGIyLTczMjctNDdmYS05YjEwLTJmNmFkMjE0MjIxYiIsIm5hbWUiOiJXaW5kc29uIiwiZW1haWwiOiJ3aW5kc29uLmFtb3JpbUBnbWFpbC5jb20iLCJwcm9maWxlIjoiQURNSU4iLCJpYXQiOjE2ODM0OTkxNDQsImV4cCI6MTY4MzUyNzk0NH0.V76XWEmgMA94xQBaSt9wuf4EwUrejz2Dii2sYQkCGgw
+Content-Type: application/json
+
+{
+  "name": "Espelho",
+  "price": "100.50"
+}
+ 

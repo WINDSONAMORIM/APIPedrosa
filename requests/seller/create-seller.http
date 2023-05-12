@@ -1,0 +1,9 @@
+@HOST = http://localhost:8080
+
+POST {{HOST}}/seller HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjIxOGEzOGIyLTczMjctNDdmYS05YjEwLTJmNmFkMjE0MjIxYiIsIm5hbWUiOiJXaW5kc29uIiwiZW1haWwiOiJ3aW5kc29uLmFtb3JpbUBnbWFpbC5jb20iLCJwcm9maWxlIjoiQURNSU4iLCJpYXQiOjE2ODM1MDc3NjcsImV4cCI6MTY4MzUzNjU2N30.EWqwShBaN8-wYG8uCkCh6uPR5a72EggH8DniY4kwuho
+//Content-Type: application/json
+
+{
+  "idSeller":"a6a40550-417f-4fb3-93c6-774353bb6320",
+}
