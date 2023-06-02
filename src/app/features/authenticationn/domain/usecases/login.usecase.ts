@@ -16,12 +16,12 @@ export class LoginUseCase {
 
         const jwtToken = new JwtToken();
 
-        const userData = {
-            id: user.id,
-            name: user.name,
-            email: user.email,
-            profile: user.profile,
-        };
+        // const userData = {
+        //     id: user.id,
+        //     name: user.name,
+        //     email: user.email,
+        //     profile: user.profile,
+        // };
 
         const token = jwtToken.sign(userData);
         return {
