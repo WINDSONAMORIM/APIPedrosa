@@ -7,7 +7,7 @@ import { loginRoutes } from "../../app/features/authenticationn/presentation/rou
 import { productRoutes } from "../../app/features/products/presentation/routes";
 import { saleRoutes } from "../../app/features/sales/presentation/routes";
 import { clientRoutes } from "../../app/features/clients/presentation/routes/client.routes";
-import { sellerRoutes } from "../../app/features/seller/presentation/routes";
+// import { sellerRoutes } from "../../app/features/seller/presentation/routes";
 
 export default (app: Express) => {
   app.get("/", (req, res) => res.status(200).send(initialPage));
@@ -16,5 +16,5 @@ export default (app: Express) => {
   app.use(productRoutes());
   app.use(saleRoutes());
   app.use(clientRoutes());
-  app.use(sellerRoutes());
+  // app.use(sellerRoutes());
 };
