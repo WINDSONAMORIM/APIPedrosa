@@ -15,7 +15,7 @@
     "zod": "^3.21.4"
   },
   "scripts": {
-    "start": "node ./dist/server.js",
+    "start": "node ./dist/index.js",
     "build": "npx tsc --watch",
     "dev": "ts-node-dev --transpile-only ./src/server.ts",
     "migration:create": "typeorm migration:create src/app/shared/infra/db/migrations/AddSoldItemsColumnInSales",
