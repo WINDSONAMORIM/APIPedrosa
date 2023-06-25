@@ -1,5 +1,5 @@
 export interface HttpResponse{
-    sucess: boolean;
+    success: boolean;
     data?: any;
     error?:any;
 }

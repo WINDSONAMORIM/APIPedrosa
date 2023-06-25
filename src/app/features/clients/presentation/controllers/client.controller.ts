@@ -9,7 +9,7 @@ export class ClientController {
     try {
       const useCase = new CreateClientUseCase();
       const client = await useCase.execute({ name, contact });
-      return ok(res, { sucess: true, data: client });
+      return ok(res, { success: true, data: client });
     } catch (error) {}
   }
 
@@ -17,7 +17,7 @@ export class ClientController {
     try {
       const useCase = new ListClientsUseCase();
       const clients = await useCase.execute();
-      return ok(res, { sucess: true, data: clients });
+      return ok(res, { success: true, data: clients });
     } catch (error) {}
   }
 }

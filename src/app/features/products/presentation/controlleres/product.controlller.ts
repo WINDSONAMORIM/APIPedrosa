@@ -11,9 +11,9 @@ export class ProductController {
       console.log(req.user);
 
       const product = await useCase.execute({ name, price }, auth);
-      return ok(res, { sucess: true, data: product });
+      return ok(res, { success: true, data: product });
     } catch (error: any) {
-      return badRequest(res, { sucess: false, error: error.message });
+      return badRequest(res, { success: false, error: error.message });
     }
   }
 }

@@ -24,7 +24,7 @@ export const createUserValidator = (
   } catch (error: any) {
     if (error instanceof ZodError) {
       return badRequest(res, {
-        sucess: false,
+        success: false,
         error: error.issues.map((issue) => ({
           campo: issue.path[0],
           message: issue.message,

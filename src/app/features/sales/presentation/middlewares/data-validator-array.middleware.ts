@@ -10,11 +10,15 @@ export const dataValidationArray = (
   const scheme = z.object({
     idSeller: z.string().nonempty(),
     idClient: z.string().nonempty(),
-    items: z.array(z.object({
-      idProduct: z.string().nonempty(),
-      amount: z.number().min(1),
-      price: z.number().min(1)
-    })).min(1)
+    items: z
+      .array(
+        z.object({
+          idProduct: z.string().nonempty(),
+          amount: z.number().min(1),
+          price: z.number().min(1),
+        })
+      )
+      .min(1),
   });
   try {
     const data = scheme.parse(req.body);
@@ -23,7 +27,7 @@ export const dataValidationArray = (
   } catch (error: any) {
     if (error instanceof ZodError) {
       return badRequest(res, {
-        sucess: false,
+        success: false,
         error: error.issues.map((issue) => ({
           campo: issue.path[0],
           mensagem: issue.message,

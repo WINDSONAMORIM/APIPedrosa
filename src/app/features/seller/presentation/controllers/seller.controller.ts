@@ -11,7 +11,7 @@ export class SellerController {
       const seller = await useCase.execute({
         idSeller,
       });
-      return ok(res, { sucess: true, data: seller });
+      return ok(res, { success: true, data: seller });
     } catch (error) {
       console.log("erro controller");
     }

@@ -10,7 +10,7 @@ export class UserController {
 
     const exist = await repository.getUserByEmail(email);
     if (exist)
-      return badRequest(res, { sucess: false, error: "Email already exists" });
+      return badRequest(res, { success: false, error: "Email already exists" });
 
     const dataUser = {
       name,
@@ -20,13 +20,12 @@ export class UserController {
     };
 
     const user = await repository.saveUser(dataUser);
-    return ok(res, { sucess: true, data: user });
+    return ok(res, { success: true, data: user });
   }
 
   async listUsers(req: Request, res: Response) {
     const repository = new UserRepository();
     const users = await repository.getUserAll();
-    return ok(res, { sucess: true, data: users });
+    return ok(res, { success: true, data: users });
   }
-  
 }

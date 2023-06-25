@@ -9,10 +9,10 @@ export class AuthenticationController {
       const { email, password } = req.body;
       const useCase = new LoginUseCase();
       const data = await useCase.execute({ email, password });
-      return ok(res, { sucess: true, data });
+      return ok(res, { success: true, data });
     } catch (error: any) {
       if (error instanceof CustomError) {
-        return unauthorized(res, { sucess: false, error: error.message });
+        return unauthorized(res, { success: false, error: error.message });
       }
       throw error;
     }

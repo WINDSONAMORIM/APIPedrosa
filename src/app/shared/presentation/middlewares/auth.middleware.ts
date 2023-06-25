@@ -7,13 +7,13 @@ export const auth = (req: Request, res: Response, next: NextFunction) => {
   const authorization = req.headers.authorization;
 
   if (!authorization) {
-    return unauthorized(res, { sucess: false, error: "invalid token" });
+    return unauthorized(res, { success: false, error: "invalid token" });
   }
 
   const token = authorization.split(" ")[1];
 
   if (!token) {
-    return unauthorized(res, { sucess: false, error: "invalid token" });
+    return unauthorized(res, { success: false, error: "invalid token" });
   }
 
   try {
@@ -26,7 +26,7 @@ export const auth = (req: Request, res: Response, next: NextFunction) => {
     return next();
   } catch (error) {
     if (error instanceof TokenError) {
-      return unauthorized(res, { sucess: false, error: "invalid token" });
+      return unauthorized(res, { success: false, error: "invalid token" });
     }
     throw error;
   }

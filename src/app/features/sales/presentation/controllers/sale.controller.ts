@@ -17,7 +17,7 @@ export class SaleController {
         amount,
         price,
       });
-      return ok(res, { sucess: true, data: sale });
+      return ok(res, { success: true, data: sale });
     } catch (error) {
       console.log(error);
     }
@@ -27,8 +27,8 @@ export class SaleController {
     const { idSeller, idClient, items } = req.body;
     try {
       const useCase = new CreateSaleArrayUseCase();
-      const sale = await useCase.execute({idClient,idSeller,items})
-      return ok(res, { sucess: true, data: sale });
+      const sale = await useCase.execute({ idClient, idSeller, items });
+      return ok(res, { success: true, data: sale });
     } catch (error) {
       console.log(error);
     }
